@@ -1,0 +1,10 @@
+{% extends 'accounts/base.html' %}
+
+{% block content %}
+<h1>Welcome to Security Project</h1>
+{% if user.is_authenticated %}
+    <p>Hello, {{ user.username }}! You're logged in.</p>
+{% else %}
+    <p>Please login or register to continue.</p>
+{% endif %}
+{% endblock %}
